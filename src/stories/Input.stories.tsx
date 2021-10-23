@@ -1,4 +1,3 @@
-
 import { Story, Meta } from '@storybook/react';
 import Input, { InputProps } from '../components/Input/Input';
 
