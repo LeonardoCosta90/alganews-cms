@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,13 +11,21 @@ import Contact from './views/Contact.view';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route path={'/'} exact component={Home} />
-        <Route path={'/contato'} exact component={Contact} />
-        <Route component={NotFound404} />
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </nav>
+      <BrowserRouter>
+        <Switch>
+          <Route path={'/'} exact component={Home} />
+          <Route path={'/contato'} exact component={Contact} />
+          <Route component={NotFound404} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
